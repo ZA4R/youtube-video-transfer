@@ -1,6 +1,6 @@
 CC = gcc
 
-FLAGS = -Wall -Wextra -g -std=c11
+FLAGS = -Wall -Wextra -pedantic -g -std=c11
 
 all: bin/exec
 
