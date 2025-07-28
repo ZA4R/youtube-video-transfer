@@ -4,16 +4,16 @@ FLAGS = -Wall -Wextra -pedantic -g -std=c11
 
 all: bin/exec
 
-bin/exec: main.o functions.o
+bin/exec: obj/main.o obj/functions.o
 	$(CC) $(FLAGS) $^ -o $@
 
-main.o: main.c
+obj/main.o: main.c
 	$(CC) $(FLAGS) -c $< -o $@
 
-functions.o: functions.c
+obj/functions.o: functions.c
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean: 
-	rm -f bin/exec main.o functions.o
+	rm -f bin/exec obj/main.o obj/functions.o
 
 .PHONY: all clean
