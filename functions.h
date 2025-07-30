@@ -8,3 +8,5 @@
 DIR* open_phone_dir();
 
 void copy_to_yt_folder(struct dirent *dir);
+
+int copy_file(FILE* to_copy, FILE* destination);
